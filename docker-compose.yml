@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  cherokee:
+    container_name: cherokee
+    build:
+      context: .
+    ports:
+      - ${CHEROKEE_PORT}:80
+      - ${CHEROKEE_ADMIN_PORT}:9090
+#    volumes:
+#      - $PWD/rootfs/usr/local/bin:/usr/local/bin
